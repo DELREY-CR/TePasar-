@@ -80,6 +80,7 @@
 
     </div>
 
+
     <main class="main">
 
         <section id="relatos" class="seccion__relatos">
@@ -183,16 +184,19 @@
         </section>
 
         <section>
-            <h2 class="seccion__titulo"> Envíanos <span>tus relatos</span></h2>
-            <video class="relato__video" autoplay muted loop playsinline preload="metadata"
-                poster="img/hero-terror.webp">
-
-                <source src="img/sinseña.mp4" type="video/mp4">
-
-            </video>
-            <div class="overlay"></div>
-
             <div class="contenedor__envio-relato">
+                <video class="relato__video" autoplay muted loop playsinline preload="metadata"
+                    poster="img/hero-terror.webp">
+
+                    <source src="img/sinseña.mp4" type="video/mp4">
+
+                </video>
+
+                <div class="hero__overlay"></div>
+                <div class="hero__overlay_prof"></div>
+
+                <h2 class="seccion__titulo relato__titulo"> Envíanos <span>tus relatos</span></h2>
+
                 <form class="relato-envio__form" action="#" method="post" enctype="multipart/form-data">
                     <div class="relato-envio__campo">
                         <label for="nombre" class="relato-envio__label">Nombre:</label>
