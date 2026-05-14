@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Te-Pasará | Relatos de terror</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Gloria+Hallelujah&family=Special+Elite&family=Nosifer&family=Spectral&family=Marcellus&display=swap"
+        rel="stylesheet">
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="hero-bg">
+
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="img/hero-terror.webp">
+
+            <source src="img/sinseñal-hero.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero__overlay"></div>
+        <div class="hero__overlay_prof"></div>
+
+        <header class="header">
+
+            <div class="header__logo-container">
+                <h2 class="header__logo">
+                    <a href="#">
+                        <span>Te</span>Pasará
+                    </a>
+                </h2>
+            </div>
+
+            <nav class="header__navegacion">
+                <a href="#relatos">Relatos <span>Oscuros</span></a>
+                <a href="envia-tu-relato.html">Envía tu relato</a>
+                <a href="darkmedia.html">DarkMedia</a>
+                <a href="mi-posesion.html">Mi posesión</a>
+            </nav>
+
+        </header>
+
+        <section class="hero">
+
+            <div class="hero__contenedor">
+
+                <h1 class="hero__titulo">
+                    Relatos de Terror que no te dejarán dormir
+                </h1>
+
+                <p class="hero__descripcion">
+                    Descubre relatos de terror inspirados en hechos reales, experiencias paranormales y leyendas
+                    urbanas. </p>
+
+                <a href="relatos.html" class="btn hero__boton">
+                    Solo para valientes
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <main class="main">
+
+        <section id="relatos" class="seccion__relatos">
+
+            <h2 class="seccion__titulo">
+                Relatos <span>Oscuros</span>
+            </h2>
+
+            <div class="contenedor__relatos">
+
+                <article class="relatos">
+
+                    <div class="relatos__contenido">
+
+                        <p class="relatos__subtitulo">RELATO <span>REAL</span></p>
+
+                        <h3 class="relatos__titulo">
+                            El exorcismo de mi hermana
+                        </h3>
+
+                        <p class="relatos__descripcion">
+                            Un relato basado en hechos reales sobre un exorcismo que salió mal.
+                        </p>
+
+                        <a href="relato1.html" class="btn">
+                            Leer relato
+                        </a>
+
+                    </div>
+                </article>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Carrusel de Posters -->
+
+        <h3 class="seccion__titulo seccion__titulo--Pequeño">
+            Posters <span>Destacados</span>
+        </h3>
+        <section class="carrusel-section">
+            <div class="swiper carrusel-posters">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide carrusel-slide">
+                        <img src="img/cerro_tenebroso.webp" alt="La Casa Maldita" class="carrusel-img">
+                        <div class="carrusel-overlay"></div>
+                        <div class="carrusel-content">
+                            <h3 class="carrusel-titulo">La Casa Maldita</h3>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide carrusel-slide">
+                        <img src="img/espejo_antiguo_tenebroso.webp" alt="El Espejo Antiguo" class="carrusel-img">
+                        <div class="carrusel-overlay"></div>
+                        <div class="carrusel-content">
+                            <h3 class="carrusel-titulo">El Espejo Antiguo</h3>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide carrusel-slide">
+                        <img src="img/voces_de_la_noche.webp" alt="Voces en la Noche" class="carrusel-img">
+                        <div class="carrusel-overlay"></div>
+                        <div class="carrusel-content">
+                            <h3 class="carrusel-titulo">Voces en la Noche</h3>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide carrusel-slide">
+                        <img src="img/muneca_tenebrosa.webp" alt="La muñeca Maldita" class="carrusel-img">
+                        <div class="carrusel-overlay"></div>
+                        <div class="carrusel-content">
+                            <h3 class="carrusel-titulo">La muñeca Maldita</h3>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide carrusel-slide">
+                        <img src="img/paralisis_sueno.webp" alt="Paralis de Sueños" class="carrusel-img">
+                        <div class="carrusel-overlay"></div>
+                        <div class="carrusel-content">
+                            <h3 class="carrusel-titulo">Viene al dormir</h3>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-prev carrusel-prev"></div>
+                <div class="swiper-button-next carrusel-next"></div>
+            </div>
+
+            <div class="carrusel-cta">
+                <a href="relatos.html" class="btn">Leer todos los articulos</a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="seccion__titulo"> Envíanos <span>tus relatos</span></h2>
+            <video class="relato__video" autoplay muted loop playsinline preload="metadata"
+                poster="img/hero-terror.webp">
+
+                <source src="img/sinseña.mp4" type="video/mp4">
+
+            </video>
+            <div class="overlay"></div>
+
+            <div class="contenedor__envio-relato">
+                <form class="relato-envio__form" action="#" method="post" enctype="multipart/form-data">
+                    <div class="relato-envio__campo">
+                        <label for="nombre" class="relato-envio__label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="relato-envio__input" required
+                            maxlength="100" placeholder="Tu nombre">
+                    </div>
+                    <div class="relato-envio__campo">
+                        <label for="correo" class="relato-envio__label">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" class="relato-envio__input" required
+                            maxlength="100" placeholder="tucorreo@ejemplo.com">
+                    </div>
+                    <div class="relato-envio__campo">
+                        <label for="relato-texto" class="relato-envio__label">Escribe tu relato (máx. 2000
+                            caracteres):</label>
+                        <textarea id="relato-texto" name="relato-texto" class="relato-envio__textarea" rows="8"
+                            maxlength="2000" placeholder="Escribe aquí tu relato..."></textarea>
+                    </div>
+                    <div class="relato-envio__campo">
+                        <label for="relato-archivo" class="relato-envio__label">O adjunta tu archivo (.doc, .docx, .pdf,
+                            máx. 5MB):</label>
+                        <input type="file" id="relato-archivo" name="relato-archivo" class="relato-envio__file"
+                            accept=".doc,.docx,.pdf">
+                    </div>
+                    <button type="submit" class="btn relato-envio__boton">Enviar relato</button>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
