@@ -1,0 +1,586 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --terciary-color: #9e0000;
+    --terciary-color-btn: #aa111194;
+    --accent-color: rgba(7, 1, 1, 0.025);
+
+    --fuente-titulos: 'Marcellus', serif;
+    --fuente-titulos2: 'Special Elite', serif;
+    --fuente-titulos3: 'Instrument Serif', serif;
+    --fuente-textos: 'Spectral', serif;
+    --fuente-textos2: 'EB Garamond', serif;
+
+    --fuente-logo: 'Special Elite', serif;
+    --fuente-logo2: 'Nosifer', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-textos);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.8;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* BOTON */
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    align-self: center;
+    margin-top: 10px;
+    padding: clamp(1rem, 2vw, 1.4rem) clamp(1.5rem, 4vw, 2.6rem);
+    /* Primer valor: padding vertical (arriba-abajo)
+       Segundo valor: padding horizontal (izquierda-derecha) */
+
+    border: 1px solid rgba(139, 0, 0, .7);
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.306);
+    color: #fff;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-family: var(--fuente-titulos2);
+
+}
+
+.btn:hover {
+    background: rgba(139, 0, 0, 0.295);
+    border-color: #8b0000;
+    transform: translateY(-3px);
+}
+
+/* Agrega una flecha después del texto del botón */
+.btn::after {
+    content: "⟶";
+
+    color: #8b0000;
+
+    font-size: 2rem;
+
+    transition: transform .3s ease;
+}
+
+.btn:hover::after {
+    transform: translateX(6px);
+}
+
+/* ====================
+   MAIN
+==================== */
+
+.main {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+
+    padding: 6rem 0;
+}
+
+.seccion__titulo {
+    margin-bottom: 6rem;
+    font-family: var(--fuente-titulos2);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+.seccion__titulo span {
+    color: var(--terciary-color);
+}
+
+
+.seccion__titulo--Pequeño {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 80px;
+
+}
+
+
+/* ====================
+   HEADER
+==================== */
+
+.header {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header__logo {
+    font-family: var(--fuente-logo);
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--terciary-color);
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover {
+    transform: scale(1.05);
+}
+
+.header__logo span {
+    color: var(--secondary-color);
+}
+
+.header__navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    left: 0;
+    width: 100vw;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0rem;
+}
+
+
+
+.header__navegacion a {
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    transition: transform 0.3s ease;
+    font-family: var(--fuente-titulos2);
+}
+
+.header__navegacion a:hover {
+    transform: scale(1.05);
+    color: var(--terciary-color);
+}
+
+/* ====================
+   HERO
+==================== */
+
+.hero {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.hero__contenedor {
+    width: min(90%, 70rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero__titulo {
+    margin: 0;
+    font-family: var(--fuente-titulos);
+    font-size: clamp(4rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--secondary-color);
+}
+
+.hero__descripcion {
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+}
+
+.hero-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.772);
+    z-index: 2;
+}
+
+/* Overlay en degradé desde abajo hasta la mitad, integrando el negro con el body */
+.hero__overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, #000 0%, transparent 100%);
+    z-index: 3;
+}
+
+
+
+/* ====================
+   RELATOS
+====================*/
+.relatos-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor__relatos {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 5rem;
+}
+
+.relatos {
+    min-height: 550px;
+    padding-left: 30px;
+    border: 1px solid rgba(157, 2, 2, 0.164);
+    box-shadow: 0 10px 40px rgba(157, 2, 2, 0.45);
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.767) 30%, transparent 100%), url('../img/hermana_cerro_noche.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+}
+
+.relatos__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.relatos__subtitulo {
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-family: var(--fuente-titulos3);
+    margin-top: 10px;
+}
+
+.relatos__subtitulo span {
+    color: var(--terciary-color);
+}
+
+.relatos__titulo {
+    font-size: clamp(4rem, 4vw, 6rem);
+    color: var(--secondary-color);
+    max-width: 200px;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    line-height: .92;
+    font-weight: 800;
+    font-family: var(--fuente-titulos);
+}
+
+
+.relatos__titulo span {
+    color: var(--terciary-color);
+}
+
+.relatos__descripcion {
+    margin-bottom: 1.1rem;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    max-width: 350px;
+}
+
+.contenedor__relatos .btn {
+    margin-top: 2rem;
+    align-self: flex-start;
+}
+
+@media (min-width: 769px) {
+
+    .relatos {
+        min-height: 500px;
+        background-position: center 35%;
+    }
+
+    .relatos__titulo {
+        margin-top: 5rem;
+        max-width: 390px;
+    }
+
+    .relatos__descripcion {
+        max-width: 400px;
+    }
+}
+
+
+/* ====================
+   CARRUSEL RELATOS
+==================== */
+
+.relatosSwiper {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.relato-mini {
+    position: relative;
+
+    height: 260px;
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 2rem;
+
+    background-image:
+        linear-gradient(to top,
+            rgba(0, 0, 0, .92),
+            rgba(0, 0, 0, .15)),
+        url('../img/hermana_cerro_noche.webp');
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    transition: transform .4s ease;
+}
+
+.relato-mini:hover {
+    transform: scale(1.02);
+}
+
+.relato-mini__titulo {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    line-height: 1;
+    font-family: var(--fuente-titulos);
+}
+
+/* ====================
+   CARRUSEL POSTERS
+==================== */
+
+.carrusel-section {
+    width: 100%;
+    padding: 2.5rem clamp(1.6rem, 4vw, 5rem);
+    background-color: #000;
+}
+
+.carrusel-posters {
+    width: 100%;
+    max-width: 120rem;
+    height: 34rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carrusel-slide {
+    position: relative;
+    height: 34rem;
+    width: min(88vw, 34rem);
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.carrusel-posters .swiper-slide {
+    opacity: 0.55;
+    transform: scale(0.92);
+}
+
+.carrusel-posters .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carrusel-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.carrusel-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.372);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carrusel-content {
+    position: absolute;
+    inset: 0;
+    padding: 3rem 2rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+.carrusel-titulo {
+    margin: 0;
+    font-family: var(--fuente-titulos2);
+    font-size: clamp(1.8rem, 2.2vw, 3rem);
+    color: var(--secondary-color);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carrusel-content .btn {
+    width: fit-content;
+    align-self: center;
+    pointer-events: auto;
+}
+
+.carrusel-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.carrusel-cta .btn {
+    margin-top: 0;
+}
+
+/* Estilos de navegación de Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(158, 0, 0, 0.6);
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.carrusel-prev {
+    left: 1.2rem;
+}
+
+.carrusel-next {
+    right: 1.2rem;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(158, 0, 0, 1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 16px;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--terciary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carrusel-posters {
+        height: 28rem;
+    }
+
+    .carrusel-slide {
+        height: 28rem;
+        width: min(82vw, 30rem);
+    }
+
+    .carrusel-content {
+        padding: 1.5rem 1.2rem;
+        gap: 1rem;
+    }
+
+    .carrusel-titulo {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carrusel-section {
+        padding-left: clamp(4rem, 7vw, 10rem);
+        padding-right: clamp(4rem, 7vw, 10rem);
+    }
+
+    .carrusel-posters {
+        height: 36rem;
+    }
+
+    .carrusel-slide {
+        height: 36rem;
+        width: clamp(30rem, 26vw, 38rem);
+    }
+}
+
+/* ====================
+   RELATO ENVIO
+==================== */ 
+
+
+
