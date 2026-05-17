@@ -229,7 +229,7 @@ a {
 }
 
 .hero__video {
-    position: absolute; 
+    position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
@@ -240,7 +240,7 @@ a {
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.437);
+    background: rgba(0, 0, 0, 0.516);
     z-index: 2;
 }
 
@@ -580,38 +580,121 @@ a {
 
 /* ====================
    RELATO ENVIO
-==================== */ 
+==================== */
 
 .envio__relato {
-  position: relative;
+    position: relative;
 
 }
 
 .contenedor__envio-relato {
-  position: relative;
+    position: relative;
+    min-height: 500px;
+    border-radius: 60px;
+    overflow: hidden; /* Asegura que el video y el overlay no se salgan del contenedor */
+}
+
+@media (min-width: 768px) {
+    .contenedor__envio-relato {
+        min-height: 650px;
+    }
 }
 
 .relato__video {
-  position: absolute;   /* El video se posiciona de forma absoluta dentro del contenedor padre (que debe tener position: relative). */
-  top: 0;               /* El borde superior del video se alinea con el borde superior del contenedor. */
-  left: 0;              /* El borde izquierdo del video se alinea con el borde izquierdo del contenedor. */
-  width: 100%;          /* El video ocupa todo el ancho del contenedor. */
-  height: 100%;         /* El video ocupa toda la altura del contenedor. */
-  object-fit: cover;    /* El video se recorta para cubrir todo el área del contenedor, sin deformarse. */
-  z-index: 0;           /* El video queda en el fondo, permitiendo que otros elementos con mayor z-index se muestren encima. */
+    position: absolute;
+    /* El video se posiciona de forma absoluta dentro del contenedor padre (que debe tener position: relative). */
+    top: 0;
+    /* El borde superior del video se alinea con el borde superior del contenedor. */
+    left: 0;
+    /* El borde izquierdo del video se alinea con el borde izquierdo del contenedor. */
+    width: 100%;
+    /* El video ocupa todo el ancho del contenedor. */
+    height: 100%;
+    /* El video ocupa toda la altura del contenedor. */
+    object-fit: cover;
+    /* El video se recorta para cubrir todo el área del contenedor, sin deformarse. */
+    z-index: 0;
+    /* El video queda en el fondo, permitiendo que otros elementos con mayor z-index se muestren encima. */
 }
 
-.contenedor__envio-relato > *:not(.relato__video):not(.relato__overlay) {
-  position: relative;
-  z-index: 2;
-} /* Todos los elementos hijos directos del contenedor, excepto el video, se posicionan de forma relativa y se les asigna un z-index de 2 para que se muestren por encima del video. */
+.contenedor__envio-relato>*:not(.relato__video):not(.relato__overlay) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Todos los elementos hijos directos del contenedor, excepto el video, se posicionan de forma relativa y se les asigna un z-index de 2 para que se muestren por encima del video. */
 
 .relato__overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.409);
-  z-index: 1;
-  pointer-events: none; /* Permite hacer clic en los elementos de arriba */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.51);
+    z-index: 1;
+    pointer-events: none;
+    /* Permite hacer clic en los elementos de arriba */
+}
+
+.relato-envio__input {
+    background: #181818;
+    /* Color de fondo */
+    color: #fff;
+    /* Color del texto */
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    /* Tamaño de fuente */
+    height: 3.6rem;
+    /* Altura del input */
+    border: 1px solid #200808;
+    /* Borde */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    padding: 1rem 1rem;
+    /* Espaciado interno */
+}
+
+.relato-envio__input:focus {
+    outline: 1px solid #aa1111;
+    /* Borde de enfoque */
+    background: #222;
+    /* Fondo más claro al enfocar */
+}
+
+.relato-envio__input::placeholder {
+    color: #bbb;
+    /* Color del texto del placeholder */
+    opacity: 1;
+    /* Asegura que el color se aplique bien */
+}
+
+.relato-envio__textarea {
+    background: #181818;
+    /* Color de fondo */
+    color: #ffffff;
+    /* Color del texto */
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    /* Tamaño de fuente */
+    border: 1px solid #200808;
+    /* Borde */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    padding: 1rem;
+    /* Espaciado interno */
+    resize: vertical;
+    /* Permite redimensionar solo verticalmente */
+    min-height: 8rem;
+    /* Altura mínima */
+}
+
+.relato-envio__textarea:focus {
+    outline: 1px solid #aa1111;
+    /* Borde de enfoque */
+    background: #222;
+    /* Fondo más claro al enfocar */
+}
+
+.relato-envio__textarea::placeholder {
+    color: #e91919;
+    /* Color del placeholder */
+    opacity: 1;
+    /* Asegura que el color se aplique bien */
 }
